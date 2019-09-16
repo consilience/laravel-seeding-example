@@ -18,7 +18,7 @@ class PermissionRoleAssignmentSeeder extends Seeder
 
         foreach ($roles as $role) {
             $configuredRole = $configuredRoles->firstWhere('name', $role->name);
-            $configuredPermissions = $configuredRole['permissions'];
+            $configuredPermissions = $configuredRole['permissionGroups'];
 
             foreach ($configuredPermissions as $permissionName) {
                 $permissions = config('seeder-data.permissions.' . $permissionName);
