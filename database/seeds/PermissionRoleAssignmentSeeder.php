@@ -14,14 +14,14 @@ class PermissionRoleAssignmentSeeder extends Seeder
     public function run()
     {
         $roles = Role::all();
-        $configuredRoles = collect(config('wiki.roles'));
+        $configuredRoles = collect(config('seeder-data.roles'));
 
         foreach ($roles as $role) {
             $configuredRole = $configuredRoles->firstWhere('name', $role->name);
             $configuredPermissions = $configuredRole['permissions'];
 
             foreach ($configuredPermissions as $permissionName) {
-                $permissions = config('wiki.permissions.' . $permissionName);
+                $permissions = config('seeder-data.permissions.' . $permissionName);
 
                 foreach ($permissions as $permission) {
                     $permissionRecord = Permission::where('name', $permission)->first();
