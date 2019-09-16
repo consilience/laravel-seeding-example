@@ -12,7 +12,7 @@ class RolesTableSeeder extends Seeder
      */
     public function run()
     {
-        $roles = config('wiki.roles');
+        $roles = config('seeder-data.roles');
 
         foreach ($roles as $role) {
             $newRole = Role::firstOrNew(
