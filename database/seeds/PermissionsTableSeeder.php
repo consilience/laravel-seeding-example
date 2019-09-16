@@ -12,7 +12,7 @@ class PermissionsTableSeeder extends Seeder
      */
     public function run()
     {
-        $permissions = config('wiki.permissions');
+        $permissions = config('seeder-data.permissions');
 
         foreach ($permissions as $permissionGroup) {
             foreach ($permissionGroup as $permission) {
