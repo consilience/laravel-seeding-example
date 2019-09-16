@@ -12,7 +12,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        $users = config('wiki.users');
+        $users = config('seeder-data.users');
 
         foreach ($users as $user) {
             $name = $user['name'];
