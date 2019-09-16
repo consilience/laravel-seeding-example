@@ -2,7 +2,7 @@
 
 Some example files for seeding application data.
 
-This mostly focuses on how to seed your application's initial roles and permissions.
+This example mostly focuses on how to seed your application's initial roles and permissions.
 
 The `database/seeders/DatabaseSeeder.php` shows the correct order for your application to seed Roles/Permissions/Users in.
 
@@ -10,4 +10,4 @@ You'll notice first it creates Roles, then Permissions, assigns Permissions to t
 
 All the seeding examples are idempotent, they can be run more than once without causing your application to crash and without creating extra stray records in your database. The `firstOrNew()` and `$record->save()` lines cover this.
 
-The example roles/permissions given represents roles/permissions you may give to a wiki application.
+The example roles/permissions given represent similar roles/permissions to those you may need for a wiki application.
