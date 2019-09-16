@@ -1,6 +1,7 @@
 <?php
 
 return [
+    // each object is represented here as an associative array
     'users' => [
         [
             'email' => 'superAdmin@app.test',
@@ -11,29 +12,27 @@ return [
     ],
 
     'roles' => [
-        'super_admin' => [
+        [
             'name' => 'super_admin',
-            'permissions' => [
+            'permissionGroups' => [ // permissions here represent a permission group name.
                 'view',
                 'show',
                 'edit',
                 'delete'
             ],
         ],
-
-        'admin' => [
+        [
             'name' => 'admin',
-            'permissions' => [
+            'permissionGroups' => [
                 'view',
                 'show',
                 'edit',
                 'delete'
             ],
         ],
-
-        'user' => [
+        [
             'name' => 'user',
-            'permissions' => [
+            'permissionGroups' => [
                 'view',
                 'show',
                 'edit'
@@ -42,7 +41,7 @@ return [
     ],
 
     'permissions' => [
-        'view' => [
+        'view' => [ // This is the permission group name that is assigned per user above.
             'view_index',
             'view_wiki',
             'view_page',
@@ -50,7 +49,7 @@ return [
             'view_images'
         ],
 
-        'show' => [
+        'show' => [ // The permission group name here must match the group name given above.
             'show_index',
             'show_wiki',
             'show_page',
