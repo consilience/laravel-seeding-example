@@ -13,7 +13,7 @@ class UserRoleAssignmentSeeder extends Seeder
     public function run()
     {
         $users = User::all();
-        $configuredUsers = collect(config('wiki.users'));
+        $configuredUsers = collect(config('seeder-data.users'));
 
         foreach ($users as $user) {
             $configuredUser = $configuredUsers->firstWhere('email', $user->email);
