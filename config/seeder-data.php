@@ -3,7 +3,7 @@
 return [
     'users' => [
         [
-            'email' => 'superAdmin@consil.co.uk',
+            'email' => 'superAdmin@app.test',
             'name' => 'Super Admin',
             'password' => 'password',
             'role' => 'super_admin',
