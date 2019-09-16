@@ -9,3 +9,5 @@ The `database/seeders/DatabaseSeeder.php` shows the correct order for your appli
 You'll notice first it creates Roles, then Permissions, assigns Permissions to those Roles, creates Users, then finally assigns those Users to the relevant Roles.
 
 All the seeding examples are idempotent, they can be ran more than once without causing your application to crash and without creating extra stray records in your database. The `firstOrNew()` and `$record->save()` lines cover this.
+
+The example roles/permissions given represents roles/permissions you may give to a wiki application.
